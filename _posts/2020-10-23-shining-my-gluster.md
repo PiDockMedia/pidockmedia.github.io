@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Shining My Gluster!
+title: Polishing for Gluster!
 ---
 
 # Robot adventures in doing some gluster stuff
@@ -15,5 +15,5 @@ Drobo frustrating. Gluster good. Loading some libraries to take care of this.
 - Bricks (of different sizes!)
 - Ubuntu
 - Arm
-- Odroid
+- Odroid HC2
 - Aw shucks, some disks!
