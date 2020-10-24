@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Polishing for Gluster!
+title: Polishing - for Gluster!
 ---
 
 ## Robot adventures in doing some gluster stuff
