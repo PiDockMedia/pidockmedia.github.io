@@ -12,6 +12,19 @@ Drobo frustrating. Odroid Good. One day I might insert some commentary here but 
 - Get the latest Ubuntu minimal image from Odroid
 - Put the image on the Micro SD Card
   - Balena Etcher is my goto
-- Micro CD then Network, then Power
+- Micro SD then Network, then Power
 - Find the device named odroid
-- ssh in to the IP
+- ssh in to the IP as root pw odroid
+- Change the root password
+  - passwd
+- Create a sudo enabled user other than root and test
+  - adduser pgtips
+  - usermod -aG sudo pgtips
+  - su - pgtips
+  - sudo ls -lah /root
+  - exit #and log in as your new sudo enabled user
+- Disable ssh root logins
+  - vi /etc/ssh/sshd_config and change PermitRootLogoin to no
+  - systemctl restart sshd
+  - Go ahead and test a root ssh
+- 
