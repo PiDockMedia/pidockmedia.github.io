@@ -32,3 +32,9 @@ Drobo frustrating. Odroid Good. One day I might insert some commentary here but 
   - sudo hostnamectl set-hostname odr00
   - vi /etc/hosts and change as well
 - Good time to reboot and login and check hostname
+- Install the Avahi daemon
+  - sudo apt install avahi-daemon
+- Let's go ahead and get those upgrades done
+  - sudo apt update
+  - sudo apt dist-upgrade
+  - sudo reboot
