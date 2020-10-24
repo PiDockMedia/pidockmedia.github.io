@@ -22,9 +22,13 @@ Drobo frustrating. Odroid Good. One day I might insert some commentary here but 
   - usermod -aG sudo pgtips
   - su - pgtips
   - sudo ls -lah /root
-  - exit #and log in as your new sudo enabled user
+  - exit 
+  - ssh-copy-id pgtips@*ip* #and log in as your new sudo enabled user
 - Disable ssh root logins
   - vi /etc/ssh/sshd_config and change PermitRootLogoin to no
   - systemctl restart sshd
   - Go ahead and test a root ssh
-- 
+- Set Hostname
+  - sudo hostnamectl set-hostname odr00
+  - vi /etc/hosts and change as well
+- Good time to reboot and login and check hostname
