@@ -38,3 +38,5 @@ Drobo frustrating. Odroid Good. One day I might insert some commentary here but 
   - sudo apt update
   - sudo apt dist-upgrade
   - sudo reboot
+- Set up cockpit (maybe)
+  - sudo apt install cockpit
