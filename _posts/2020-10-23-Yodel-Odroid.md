@@ -38,5 +38,8 @@ Drobo frustrating. Odroid Good. One day I might insert some commentary here but 
   - sudo apt update
   - sudo apt dist-upgrade
   - sudo reboot
-- Set up cockpit (maybe)
-  - sudo apt install cockpit
+- Set up big disk
+  - sudo cgdisk /dev/sda
+  - sudo mkfs -t ext4 /dev/sda1
+  - sudo mkdir /mnt/storage
+  - Run sudo blkid again, note the UUID of your /dev/sdb1 partition and add it into /etc/fstab (make a backup of fstab by installing etckeeper - this file is important): UUID="b4c93..."  /mnt/storage  ext4  defaults  0  2
