@@ -40,6 +40,7 @@ Drobo frustrating. Odroid Good. One day I might insert some commentary here but 
   - sudo apt dist-upgrade
   - sudo reboot
 - Set up big disk
+  - sudo blkid
   - sudo cgdisk /dev/sda
   - sudo mkfs -t ext4 /dev/sda1
   - sudo mkdir /mnt/storage
