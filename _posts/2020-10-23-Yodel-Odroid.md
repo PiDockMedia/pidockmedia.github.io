@@ -18,12 +18,12 @@ Drobo frustrating. Odroid Good. One day I might insert some commentary here but 
 - Change the root password
   - passwd
 - Create a sudo enabled user other than root and test
-  - adduser pgtips
-  - usermod -aG sudo pgtips
-  - su - pgtips
+  - adduser pi
+  - usermod -aG sudo pi
+  - su - pi
   - sudo ls -lah /root
   - exit 
-  - ssh-copy-id pgtips@*ip* #and log in as your new sudo enabled user
+  - ssh-copy-id pi@*ip* #and log in as your new sudo enabled user
 - Disable ssh root logins
   - vi /etc/ssh/sshd_config and change PermitRootLogoin to no
   - systemctl restart sshd
