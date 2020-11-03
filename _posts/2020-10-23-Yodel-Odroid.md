@@ -22,7 +22,8 @@ Drobo frustrating. Odroid Good. One day I might insert some commentary here but 
   - usermod -aG sudo pi
   - su - pi
   - sudo ls -lah /root
-  - exit 
+  - exit
+  - exit
   - ssh-copy-id pi@*ip* #and log in as your new sudo enabled user
 - Disable ssh root logins
   - vi /etc/ssh/sshd_config and change PermitRootLogoin to no
