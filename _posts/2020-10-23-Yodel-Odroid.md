@@ -26,8 +26,8 @@ Drobo frustrating. Odroid Good. One day I might insert some commentary here but 
   - exit
   - ssh-copy-id pi@*ip* #and log in as your new sudo enabled user
 - Disable ssh root logins
-  - vi /etc/ssh/sshd_config and change PermitRootLogoin to no
-  - systemctl restart sshd
+  - sudo vi /etc/ssh/sshd_config and change PermitRootLogoin to no
+  - sudo systemctl restart sshd
   - Go ahead and test a root ssh
 - Set Hostname
   - sudo hostnamectl set-hostname odr00
@@ -40,8 +40,9 @@ Drobo frustrating. Odroid Good. One day I might insert some commentary here but 
   - sudo apt dist-upgrade
   - sudo reboot
 - Set up big disk
+  - apt-get install gdisk (not necessary but cgdisk is fast and easy)
   - sudo blkid
   - sudo cgdisk /dev/sda
   - sudo mkfs -t ext4 /dev/sda1
   - sudo mkdir /mnt/storage
-  - Run sudo blkid again, note the UUID of your /dev/sdb1 partition and add it into /etc/fstab (make a backup of fstab by installing etckeeper - this file is important): UUID="b4c93..."  /mnt/storage  ext4  defaults  0  2
+  - Run sudo blkid again, note the UUID of your /dev/sda1 partition and add it into /etc/fstab (make a backup of fstab by installing etckeeper - this file is important): UUID="b4c93..."  /mnt/storage  ext4  defaults  0  2
