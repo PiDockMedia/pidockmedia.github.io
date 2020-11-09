@@ -32,6 +32,20 @@ Drobo frustrating. Odroid Good. One day I might insert some commentary here but 
 - Set Hostname
   - sudo hostnamectl set-hostname odr00
   - vi /etc/hosts and change as well
+- Static IP
+  - I set this up later in the process but this is best done here.
+  - nmicli and get the name of the network device
+  - Change the name of the connection to something sensical. I am old school
+    - nmcli con edit id "Wired connection 1"
+    - set connection.id eth0
+    - save
+    - quit
+  - Set your static
+    - nmcli con mod "eth0" ipv4.addresses 192.168.0.31/24
+    - nmcli con mod "eth0" ipv4.gateway 192.168.0.1
+    - nmcli con mod "eth0" ipv4.dns "192.168.0.1"
+    - nmcli con mod "eth0" ipv4.method manual
+    - nmcli con up "eth0"
 - Good time to reboot and login and check hostname
 - Install the Avahi daemon
   - sudo apt install avahi-daemon
@@ -44,5 +58,10 @@ Drobo frustrating. Odroid Good. One day I might insert some commentary here but 
   - sudo blkid
   - sudo cgdisk /dev/sda
   - sudo mkfs -t ext4 /dev/sda1
-  - sudo mkdir /mnt/storage
-  - Run sudo blkid again, note the UUID of your /dev/sda1 partition and add it into /etc/fstab (make a backup of fstab by installing etckeeper - this file is important): UUID="b4c93..."  /mnt/storage  ext4  defaults  0  2
+  - sudo mkdir /mnt/brick01
+  - Run sudo blkid again, note the UUID of your /dev/sda1 partition and add it into /etc/fstab (make a backup of fstab by installing etckeeper - this file is important): UUID="b4c93..."  /mnt/brick01  ext4  defaults  0  2
+- Gluster
+  - Install the packages you need
+    - sudo apt-get update
+    - sudo apt-get install glusterfs-server attr
+  - From odr00 create a trustedpool of GlusterFS nodes
