@@ -23,7 +23,7 @@ WARNING: I am comfortable with working around electricity. It has been years sin
 
   - Shuck the monitor.
   - Get the Controller Board, Power Board, control buttons, and any other electronics out.
-  - Capton Tape them logically to the back of the screen so everything reconnects. Put plastic sheets under them to insulate from the screen metal. make sure you have the power control successfully included. USB ports may be akipped but could be useful for powering the board (I did not have these).
+  - Capton Tape them logically to the back of the screen so everything reconnects. Put plastic sheets under them to insulate from the screen metal. Make sure you have the power control successfully included. USB ports may be akipped but could be useful for powering the board (I did not have these).
   - Plug them all back in. Make sure the monitor powers on
 
 - Pi
@@ -46,4 +46,8 @@ WARNING: I am comfortable with working around electricity. It has been years sin
     }`
 
   - Stick that in your Pi and boot it up
+
+  - Find it on your network and log in as the pi user/default password
+
+  - Change the pi user password (passwd)
 
