@@ -51,3 +51,33 @@ WARNING: I am comfortable with working around electricity. It has been years sin
 
   - Change the pi user password (passwd)
 
+  - Run `sudo raspi-config` and set some things
+
+    - Change Hoistname
+    - Wait for network at boot - Probably No
+    - Set your Locale & TimeZone
+    - Expand Filesystem
+    - Enable Overscan
+    - Memory Split to 128 (or 256 on Pi4) for more GPU oomph)
+    - GL driver set to G1 Legacy
+    - Finish & Reboot
+
+  - Update - `sudo apt-get update -y && apt-get dist-upgrade -y`
+
+  - Reboot
+
+  - My pictures sit on a NAS
+
+    - cifs-utils should be installed
+
+    - `sudo mkdir -p /etc/samba;sudo touch /etc/samba/passwd_file; sudo chmod 600 /etc/samba/passwd_file;sudo vi /etc/samba/passwd_file`
+
+    - Add 2 lines to that file and save it. (and learn basic vi if you need to...or replace vi with nano...find your happiness)
+      `username=<NAS Username>
+
+      password=<NAS Password>`
+
+  - Display Images
+
+    - Impressive
+
