@@ -73,6 +73,9 @@ WARNING: I am comfortable with working around electricity. It has been years sin
     - Add 2 lines to that file and save it. (and learn basic vi if you need to...or replace vi with nano...find your happiness)
       - `username=<NAS Username>`
       - `password=<NAS Password>`
+    - Add a line to /etc/fstab to mount this
+      - `//192.168.XXX.XXX/storage/Pictures	/mnt/Pictures	cifs	credentials=/etc/samba/passwd_file,rw,domain=DOMAIN,uid=1000,gid=1000,iocharset=utf8	0	0`
+    - Mount it with `mount -a`
 
   - Display Images
 
