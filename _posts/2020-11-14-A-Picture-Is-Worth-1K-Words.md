@@ -71,8 +71,8 @@ WARNING: I am comfortable with working around electricity. It has been years sin
     - cifs-utils should be installed
     - `sudo mkdir -p /etc/samba;sudo touch /etc/samba/passwd_file; sudo chmod 600 /etc/samba/passwd_file;sudo vi /etc/samba/passwd_file`
     - Add 2 lines to that file and save it. (and learn basic vi if you need to...or replace vi with nano...find your happiness)
-      - `username=<NAS Username>``
-      - ``password=<NAS Password>`
+      - `username=<NAS Username>`
+      - `password=<NAS Password>`
 
   - Display Images
 
