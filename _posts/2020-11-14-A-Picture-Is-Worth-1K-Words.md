@@ -53,7 +53,7 @@ WARNING: I am comfortable with working around electricity. It has been years sin
 
   - Run `sudo raspi-config` and set some things
 
-    - Change Hoistname
+    - Change Hostname
     - Wait for network at boot - Probably No
     - Set your Locale & TimeZone
     - Expand Filesystem
