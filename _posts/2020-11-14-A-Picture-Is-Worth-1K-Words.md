@@ -51,9 +51,12 @@ WARNING: I am comfortable with working around electricity. It has been years sin
 
   - Change the pi user password (passwd)
 
+  - Install vim (come on kid, everyone's doing it)
+
   - Run `sudo raspi-config` and set some things
 
     - Change Hostname
+    - Autologin Text console, automatically logged in as 'pi' user
     - Wait for network at boot - Probably No
     - Set your Locale & TimeZone
     - Expand Filesystem
@@ -74,10 +77,14 @@ WARNING: I am comfortable with working around electricity. It has been years sin
       - `username=<NAS Username>`
       - `password=<NAS Password>`
     - Add a line to /etc/fstab to mount this
-      - `//192.168.XXX.XXX/storage/Pictures	/mnt/Pictures	cifs	credentials=/etc/samba/passwd_file,rw,domain=DOMAIN,uid=1000,gid=1000,iocharset=utf8	0	0`
+      - `//192.168.XXX.XXX/storage/Pictures	/mnt/pictures	cifs	credentials=/etc/samba/passwd_file,rw,domain=DOMAIN,uid=1000,gid=1000,iocharset=utf8	0	0`
+    - Create a mountpoint - mkdir /mnt/pictures
     - Mount it with `mount -a`
 
   - Display Images
 
     - Impressive
+      - sudo apt-get install impressive
+      - Pick your directory full of pictures 
+    - pi
 
